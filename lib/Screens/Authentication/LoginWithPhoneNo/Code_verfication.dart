@@ -109,9 +109,10 @@ class _code_verifications_screenState extends State<code_verifications_screen> {
                       final _credential = PhoneAuthProvider.credential(
                           verificationId: widget.verification, smsCode: _code
                           .text.toString());
+ value1.change_state1(true),
+  setState(() {
 
-
-
+                      });
                       _auth.signInWithCredential(_credential).then((value) =>
                       {
                         value1.change_state1(true),
