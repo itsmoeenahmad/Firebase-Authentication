@@ -103,22 +103,16 @@ class _code_verifications_screenState extends State<code_verifications_screen> {
                   return InkWell(
                     onTap: () {
                       value1.change_state1(false);
-                      setState(() {
-
-                      });
+                      setState(() {});
                       final _credential = PhoneAuthProvider.credential(
                           verificationId: widget.verification, smsCode: _code
                           .text.toString());
- value1.change_state1(true),
-  setState(() {
-
-                      });
+ value1.change_state1(true);
+  setState(() {});
                       _auth.signInWithCredential(_credential).then((value) =>
                       {
-                        value1.change_state1(true),
-                        setState(() {
-
-                        }),
+                        value1.change_state1(false),
+                        setState(() {}),
                         showmessage("Login Successfully", Colors.green),
                         Navigator.push(context, MaterialPageRoute(
                             builder: (context) => const home_screen())),
@@ -126,9 +120,7 @@ class _code_verifications_screenState extends State<code_verifications_screen> {
                       }).onError((error, stackTrace) =>
                       {
                       value1.change_state1(true),
-                        setState(() {
-
-                        }),
+                        setState(() {}),
                         showmessage(error.toString(), Colors.red)
                       });
                     },

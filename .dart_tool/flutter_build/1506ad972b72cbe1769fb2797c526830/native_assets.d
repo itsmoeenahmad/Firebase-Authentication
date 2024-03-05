@@ -1,0 +1,1 @@
+ /Users/apple/AndroidStudioProjects/Iplexsoft\ moeen/Learn-Firebase-Flutter/.dart_tool/flutter_build/1506ad972b72cbe1769fb2797c526830/native_assets.yaml: 

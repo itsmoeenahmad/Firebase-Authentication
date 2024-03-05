@@ -117,6 +117,9 @@ class _login_with_phone_numberState extends State<login_with_phone_number> {
                             verificationCompleted: (_) {},
                             verificationFailed: (e) {
                               showmessage(e.toString(), Colors.red);
+                              value.change_state(true);
+                              setState(() {
+                              });
                             },
                             codeSent: (String verification, int? token) {
                               value.change_state(true);
